@@ -6,7 +6,9 @@ We introduce an innovative transformer-based model with generative decoding and 
 The code model is based on LSTM neural network optimized by improved particle swarm optimization algorithm, which predicts the next day by Adj Close Price of the first 20 days.
 
 Multi-dimensional and multi-step prediction can be achieved, seq_len in the code represents the length of the input sequence, mulpre represents the number of prediction steps.
-![image](https://github.com/user-attachments/assets/1f2aaa86-7a7f-44d6-b03d-afe0c6a98f3e)
+
+
+
 
 Code coverage detailed comments, can be modified as needed.
 
