@@ -16,7 +16,6 @@ from dataclasses import dataclass
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-
 from transformer_helper_dc import *
 from rolling_and_plot_dc import data_plot, rolling_split, normalize, validate
 
@@ -678,7 +677,7 @@ for i in l:
     y_test_dff1, y_test = denormalize(y_test)
 
     stock = i
-    model2 = 'Transformer2'
+    model2 = 'Galformer'
     csv_path = 'C:/lyx/learning/期刊论文/程序结果/对比图表/' + stock +'/' + model2 + '.xls'
     df = pd.DataFrame(predicted_stock_price_multi_head)
     df.columns.name = None
