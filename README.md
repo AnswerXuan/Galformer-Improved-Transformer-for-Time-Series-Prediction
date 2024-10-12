@@ -1,7 +1,7 @@
 # Galformer-Improved-Transformer-for-Time-Series-Prediction
 Galformer: A Transformer with Generative Decoding and a Hybrid Loss Function for Multi-Step Stock Market Index Prediction(Tensorflow 2.9.1, Python 3.7)
 
-The paper has been published, DOI:https://doi.org/10.1038/s41598-024-72045-3
+The paper has been published, DOI : https://doi.org/10.1038/s41598-024-72045-3
 
 ![image](https://s2.loli.net/2024/10/12/boHp4vQFZjJI1lh.png)
 
@@ -22,3 +22,7 @@ Code coverage detailed comments, can be modified as needed.
 Note that file_path and csv_path are the addresses of the folder where the results are saved, and filename is the address where the historical data set is stored. Please change it as required. l is the file name of each data set, using the for loop can achieve a run to predict multiple data sets, and save the results.
 
 The introduction of its principle, parameter settings and experimental results can be seen in the paper PDF: ''Galformer.pdf''
+
+Cited as:
+
+Ji, Y., Luo, Y., Lu, A. et al. Galformer: a transformer with generative decoding and a hybrid loss function for multi-step stock market index prediction. Sci Rep 14, 23762 (2024). https://doi.org/10.1038/s41598-024-72045-3
