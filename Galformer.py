@@ -115,8 +115,8 @@ for i in l:
         if normalize:
             standard_scaler = preprocessing.StandardScaler()
             train = standard_scaler.fit_transform(train)
-            valid = standard_scaler.fit_transform(valid)
-            test = standard_scaler.fit_transform(test)
+            valid = standard_scaler.transform(valid)
+            test = standard_scaler.transform(test)
 
         print('train',train)
         print('valid', valid)
@@ -607,7 +607,7 @@ for i in l:
         test = data1[int(row2): , :]
         test = test.reshape(-1, 1)#取原来没有归一化的adj数据作为样本
         standard_scaler = preprocessing.StandardScaler()
-        m = standard_scaler.fit_transform(test)  # 利用m对data进行归一化，并储存df的归一化参数. 用测试集的归一化参数来反归一化y_test和预测值
+        m = standard_scaler.fit_transform(train)  # 利用m对data进行归一化，并储存df的归一化参数. 用训练集的归一化参数来反归一化y_test和预测值
 
 
         '反归一化'
