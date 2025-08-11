@@ -602,8 +602,11 @@ for i in l:
         print(df1.head())
         data = df.values
         data1 = df1.values
+        row1 = round(division_rate1 * list1.shape[0])
         row2 = round(division_rate2 * list1.shape[0])
+        
         # 训练集和测试集划分
+        train = data1[ :int(row1), :]
         test = data1[int(row2): , :]
         test = test.reshape(-1, 1)#取原来没有归一化的adj数据作为样本
         standard_scaler = preprocessing.StandardScaler()
@@ -744,3 +747,4 @@ for i in l:
     plt.legend(fontsize=18)
     plt.show()
     '''
+
