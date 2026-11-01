@@ -307,7 +307,7 @@ for i in l:
 
             #应该concatenate！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
             for i in range(self.num_layers):
-                x = self.enc_layers[i](x, training)
+                x = self.enc_layers[i](x, training=training)
 
             return x  # (G.batch_size, G.src_len, G.dense_dim)
 
@@ -458,7 +458,7 @@ for i in l:
                                        enc_output,
                                        self.dec_ahead_mask,
                                        self.enc_memory_mask,
-                                       training)
+                                       training=training)
 
             print('y.shape', y.shape)
             return y
@@ -522,10 +522,10 @@ for i in l:
 
 
 
-            enc_output = self.encoder(enc_input, training)  # (G.batch_size, G.src_len, G.num_features)
+            enc_output = self.encoder(enc_input, training=training)  # (G.batch_size, G.src_len, G.num_features)
             print('enc_output.shape', enc_output.shape)
 
-            dec_output = self.decoder(dec_input, enc_output, training)
+            dec_output = self.decoder(dec_input, enc_output, training=training)
             print('dec_output.shape', dec_output.shape)
             # (G.batch_size, G.tgt_len, 32)
 
